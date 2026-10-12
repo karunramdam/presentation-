@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Holi - Festival of Colors | Mid-Term Project Showcase</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header class="hero" id="home">
+        <nav class="navbar">
+            <div class="logo"><i class="fa-solid fa-palette"></i> HoliFest</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#presentation">Presentation</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="hero-content">
+            <span class="badge">Mid-Term Web Project</span>
+            <h1>Celebrate the Festival of Colors</h1>
+            <p>Spread love, joy, and vibrant hues this Holi!</p>
+            <div class="hero-btns">
+                <a href="#presentation" class="btn btn-primary">View Presentation Guide</a>
+                <a href="#gallery" class="btn btn-secondary">Explore Gallery</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <h2>What is Holi?</h2>
+            <p>Holi is a popular and significant Hindu festival celebrated as the Festival of Colors, Love, and Spring[cite: 1]. It signifies the victory of good over evil, the arrival of spring, and an occasion to meet others, play and laugh, forget and forgive, and mend broken relationships[cite: 1].</p>
+        </div>
+    </section>
+
+    <!-- Mid-Term Presentation & Architecture Section -->
+    <section id="presentation" class="presentation-section">
+        <div class="container">
+            <h2><i class="fa-solid fa-laptop-code"></i> Mid-Term Project Overview</h2>
+            <p class="section-desc">Designed to showcase modern web development concepts, responsive layouts, and user engagement components.</p>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <i class="fa-solid fa-mobile-screen-button"></i>
+                    <h3>Responsive Layouts</h3>
+                    <p>Built using CSS Flexbox and CSS Grid to seamlessly adapt across mobile, tablet, and desktop viewports.</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fa-solid fa-paintbrush"></i>
+                    <h3>Modern UI / UX</h3>
+                    <p>Custom color scheme, CSS gradients, hover effects, and cohesive typography via Google Fonts (Poppins).</p>
+                </div>
+                <div class="feature-card">
+                    <i class="fa-solid fa-bolt"></i>
+                    <h3>Interactive Forms</h3>
+                    <p>Enhanced user interaction with dynamic form handling, real-time feedback, and structured greeting submissions.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery-section">
+        <div class="container">
+            <h2>Holi Moments</h2>
+            <div class="gallery-grid">
+                <!-- New High-Res Unsplash Images -->
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1678287424919-ab2432924976?auto=format&fit=crop&w=600&q=80" alt="Joyful people throwing vibrant colors during Holi celebration">
+                    <div class="gallery-overlay"><span>Vibrant Hues</span></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=600&q=80" alt="Traditional colorful powder celebration">
+                    <div class="gallery-overlay"><span>Tradition & Joy</span></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1615811361523-6bd03c7748e7?auto=format&fit=crop&w=600&q=80" alt="Close-up of bright colored powder Gulal">
+                    <div class="gallery-overlay"><span>Festive Smiles</span></div>
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.unsplash.com/photo-1517457373958-b7bdd4587205?auto=format&fit=crop&w=600&q=80" alt="Happy festival moments together">
+                    <div class="gallery-overlay"><span>Celebration Time</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact / Wish Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2>Send Holi Greetings</h2>
+            <form class="contact-form" id="greetingForm">
+                <input type="text" id="nameInput" placeholder="Your Name" required>
+                <input type="email" id="emailInput" placeholder="Your Email" required>
+                <textarea id="messageInput" placeholder="Your Holi Message" rows="4" required></textarea>
+                <button type="submit" class="btn btn-primary">Send Wishes</button>
+                <p id="formFeedback" class="form-feedback"></p>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 HoliFest. Created by <strong>Karun Bishowakarma</strong>[cite: 1] | Mid-Term Web Presentation | Check out my <a href="https://github.com/karunramdam" target="_blank">GitHub Profile</a>[cite: 1]</p>
+    </footer>
+
+    <!-- Simple Interactivity Script -->
+    <script>
+        document.getElementById('greetingForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const feedback = document.getElementById('formFeedback');
+            feedback.style.color = '#28a745';
+            feedback.textContent = '🎉 Thank you! Your Holi greeting has been successfully submitted.';
+            this.reset();
+            setTimeout(() => { feedback.textContent = ''; }, 5000);
+        });
+    </script>
+</body>
+</html>
